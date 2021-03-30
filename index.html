@@ -7,7 +7,7 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-	<div id='myDiv'></div>
+	<div id='chart'></div>
 </body>
 
 <script>
@@ -22,21 +22,30 @@
         x: xAxis,
         y: sales,
         name: 'Sales',
-        type: 'bar'
+        type: 'bar',
+        marker: {
+            opacity: 0.7,
+        }
     };
 
     var trace2 = {
         x: xAxis,
         y: expenses,
         name: 'Expenses',
-        type: 'bar'
+        type: 'bar',
+        marker: {
+            opacity: 0.5
+        }
     };
 
     var data = [trace1, trace2];
 
-    var layout = {barmode: 'group'};
+    var layout = {
+        title: 'Sales and Expenses',
+        barmode: 'group'
+    };
 
-    Plotly.newPlot('myDiv', data, layout);
+    Plotly.newPlot('chart', data, layout);
 
 </script>
 </html>
