@@ -7,7 +7,7 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+	<div id='myDiv'></div>
 </body>
 
 <script>
@@ -17,10 +17,6 @@
     const xAxis = rawData.map(x => x[0]);
     const sales = rawData.map(s => s[1]);
     const expenses = rawData.map(e => e[2]);
-
-    console.log(xAxis);
-    console.log(sales);
-    console.log(expenses);
 
     var trace1 = {
         x: xAxis,
